@@ -92,6 +92,10 @@ reviews.push({name: 'Brit', rating: 5, feedback:'this place is great! Delicious 
 
 console.log('task 4:', reviews);
 
+reviews[7].feedback='this place is chill with really cool people, great for getting work done on weekdays';
+
+console.log('task 5:', reviews);
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that creates an object with name, rating, feedback, add the new review to the end of an array and returns the resulting array. 
 
@@ -102,14 +106,13 @@ Use the addReview function below to do the following:
   🌟 EXAMPLE: addReview(reviews, 'Billy', 2, 'Lame food!') should add the following to the end of the array: {name: 'Billy', rating: 2, feedback: 'Lame food!'}
   4. Return the updated array
 */
-reviews[7].feedback='this place is chill with really cool people, great for getting work done on weekdays';
 
-console.log('task 5:', reviews);
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(array, name, rating, feedback){
+   reviews(array, name, rating, feedback)
+   return  {reviews, name, rating, feedback};
 }
-
+console.log('task 5', addReview(reviews, 'Daniela', 5, 'great eats!'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -123,10 +126,10 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, number) {
+  return `${array[number].name} gave the restaurant a ${array[number].rating} star reviews, and their feedback was ${array[number].feedback}`
 }
-
+console.log('task 6', getReviewByIndex(reviews, 2));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
